@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log In — Pride Bank</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%23C8102E%22/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="auth-shell">
+  <aside class="auth-side">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M20 2L36 9V19C36 28.5 29.5 35.5 20 38C10.5 35.5 4 28.5 4 19V9L20 2Z" fill="#C8102E"/>
+        <path d="M20 8L30 12.5V19.5C30 25.8 25.9 30.7 20 32.5C14.1 30.7 10 25.8 10 19.5V12.5L20 8Z" fill="#14110F"/>
+        <path d="M20 14L20 26M14 20L26 20" stroke="#F7F4EF" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-word">PRIDE <em>BANK</em></span>
+    </a>
+    <blockquote>
+      “Opening my account took less time than making breakfast. Pride Bank just gets out of your way.”
+      <cite>— Chinwe O., customer since 2021</cite>
+    </blockquote>
+    <p style="font-size:0.82rem; color:rgba(255,255,255,0.55); margin:0;">A demo bank interface for a class project — not a real financial institution.</p>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M20 2L36 9V19C36 28.5 29.5 35.5 20 38C10.5 35.5 4 28.5 4 19V9L20 2Z" fill="#C8102E"/>
+          <path d="M20 8L30 12.5V19.5C30 25.8 25.9 30.7 20 32.5C14.1 30.7 10 25.8 10 19.5V12.5L20 8Z" fill="#14110F"/>
+          <path d="M20 14L20 26M14 20L26 20" stroke="#F7F4EF" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">PRIDE <em>BANK</em></span>
+      </a>
+      <h1>Welcome back</h1>
+      <p>Log in to view your balance, send money and manage your account.</p>
+
+      <div class="form-alert error" id="formAlert" role="alert"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="field" id="emailField">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          <div class="error-msg">Enter a valid email address.</div>
+        </div>
+
+        <div class="field" id="passwordField">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+            <button type="button" class="toggle-visibility" id="togglePassword" aria-label="Show password">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke-width="2"/></svg>
+            </button>
+          </div>
+          <div class="error-msg">Enter your password.</div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:22px;">
+          <label class="checkbox-row"><input type="checkbox" id="remember" /> Remember me</label>
+          <a href="#" style="font-size:0.85rem; color:var(--red); font-weight:600;" id="forgotLink">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Log in</button>
+      </form>
+
+      <div class="divider-text">Demo credentials</div>
+      <div class="panel" style="padding:16px 18px; margin-bottom:0;">
+        <p style="margin-bottom:4px; font-size:0.85rem;"><strong>Email:</strong> demo@pridebank.test</p>
+        <p style="margin-bottom:0; font-size:0.85rem;"><strong>Password:</strong> Demo@1234</p>
+      </div>
+
+      <p class="text-center" style="margin-top:22px;">New to Pride Bank? <a href="signup.html" style="color:var(--red); font-weight:600;">Open an account</a></p>
+    </div>
+  </main>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

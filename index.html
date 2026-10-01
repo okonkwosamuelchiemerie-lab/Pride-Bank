@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pride Bank — Banking with Pride</title>
+<meta name="description" content="Pride Bank is a full-service digital bank offering accounts, transfers, cards and loans — built to feel proud, personal and secure." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%23C8102E%22/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 2L36 9V19C36 28.5 29.5 35.5 20 38C10.5 35.5 4 28.5 4 19V9L20 2Z" fill="#C8102E"/>
+        <path d="M20 8L30 12.5V19.5C30 25.8 25.9 30.7 20 32.5C14.1 30.7 10 25.8 10 19.5V12.5L20 8Z" fill="#14110F"/>
+        <path d="M20 14L20 26M14 20L26 20" stroke="#F7F4EF" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-word">PRIDE <em>BANK</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#personal">Personal</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="login.html">Log In</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-outline-light btn-sm">Log In</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Open Account</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-ambient" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="dot-grid"></div>
+  </div>
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow-line">A DIGITAL BANK BUILT FOR EVERYDAY PRIDE</div>
+      <h1>Banking that carries your pride, everywhere you go.</h1>
+      <p class="lead">Open an account in minutes, move money instantly, track every transaction, and manage cards and loans — all from one calm, dependable place.</p>
+      <div class="hero-cta">
+        <a href="signup.html" class="btn btn-primary">Open a free account</a>
+        <a href="login.html" class="btn btn-outline-light">Log in to your account</a>
+      </div>
+      <div class="hero-trust">
+        <div><strong>3.2M+</strong><span>Customers served</span></div>
+        <div><strong>1,050+</strong><span>Branches &amp; agent locations</span></div>
+        <div><strong>24/7</strong><span>Support, every day</span></div>
+        <div><strong>₦0</strong><span>Monthly maintenance fee</span></div>
+      </div>
+    </div>
+    <div class="transfer-illustration" aria-hidden="true">
+      <svg viewBox="0 0 380 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a person sending money instantly from their phone">
+        <path d="M92 420 C92 316 132 274 191 274 C250 274 290 316 290 420 Z" fill="#1B1613"/>
+        <path d="M150 274 L191 306 L232 274" stroke="#C8102E" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M118 300 C 92 332 82 376 88 420" stroke="#C88B5A" stroke-width="30" stroke-linecap="round" fill="none"/>
+        <path d="M252 296 C 288 284 302 244 296 196" stroke="#C88B5A" stroke-width="32" stroke-linecap="round" fill="none"/>
+        <rect x="171" y="146" width="40" height="34" rx="10" fill="#C88B5A"/>
+        <circle cx="191" cy="116" r="46" fill="#C88B5A"/>
+        <path d="M145 106 C145 66 162 46 191 46 C220 46 237 66 237 106 C237 90 224 80 191 80 C158 80 145 90 145 106 Z" fill="#1D1512"/>
+
+        <g class="ti-phone-group">
+          <circle class="ti-pulse-ring ring1" cx="262" cy="188" r="24"></circle>
+          <circle class="ti-pulse-ring ring2" cx="262" cy="188" r="24"></circle>
+          <circle class="ti-pulse-ring ring3" cx="262" cy="188" r="24"></circle>
+          <rect x="230" y="128" width="64" height="120" rx="14" fill="#F7F4EF" stroke="#14110F" stroke-width="3"/>
+          <rect x="238" y="142" width="48" height="80" rx="4" fill="#14110F"/>
+          <rect x="238" y="142" width="48" height="28" rx="4" fill="#C8102E"/>
+          <rect x="244" y="180" width="36" height="6" rx="3" fill="#3A322D"/>
+          <rect x="244" y="192" width="24" height="6" rx="3" fill="#3A322D"/>
+          <g class="ti-check">
+            <circle cx="262" cy="188" r="13" fill="none" stroke="#6EE7A8" stroke-width="3"/>
+            <path d="M255 188 l5 5 l10 -11" stroke="#6EE7A8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+
+        <text class="ti-coin c1" x="304" y="112" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="22" fill="#B68A2E">₦</text>
+        <text class="ti-coin c2" x="326" y="158" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#C8102E">₦</text>
+        <text class="ti-coin c3" x="296" y="84" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="14" fill="#B68A2E">₦</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="transfer-demo">
+  <div class="container">
+    <div class="transfer-demo-inner">
+      <div class="transfer-demo-head">
+        <div class="eyebrow-line" style="color: var(--gold);">SEE IT IN ACTION</div>
+        <h2 style="font-size: clamp(1.5rem, 2.8vw, 2rem);">This is what an instant transfer feels like</h2>
+        <p>Watch money move from one Pride Bank account to another — no spinner, no waiting. This is a live animation, not a recording, so it's running right now.</p>
+      </div>
+
+      <div class="transfer-stage" aria-hidden="true">
+        <div class="transfer-node from">
+          <div class="avatar">AN</div>
+          <span class="name">Adaeze N.</span>
+          <span class="acct">•••• 4821</span>
+        </div>
+        <div class="transfer-path">
+          <div class="transfer-badge">₦50,000 sent</div>
+          <div class="transfer-dot"></div>
+        </div>
+        <div class="transfer-node to">
+          <div class="avatar">CO</div>
+          <span class="name">Chinwe O.</span>
+          <span class="acct">•••• 3081</span>
+        </div>
+      </div>
+
+      <div class="transfer-stats-row">
+        <div><strong>&lt; 1 sec</strong><span>Average transfer time</span></div>
+        <div><strong>24/7</strong><span>Transfers, even on holidays</span></div>
+        <div><strong>₦0</strong><span>Fee between Pride Bank accounts</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="personal">
+  <div class="container">
+    <div class="section-head">
+      <h2>Everything your money needs, in one app</h2>
+      <p>From your very first deposit to your next big loan, Pride Bank keeps every part of your financial life organised, visible and within reach.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 10l8-6 8 6M6 10v9h12v-9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Instant account opening</h3>
+        <p>Sign up with just your name, phone number and email — your account number is generated immediately, no paperwork queues.</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Transfers that land instantly</h3>
+        <p>Send money to any Pride Bank account by number, with a running transaction history and PIN confirmation for every move.</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke-width="2"/><path d="M3 10h18" stroke-width="2"/></svg>
+        </div>
+        <h3>Cards you control</h3>
+        <p>View your card details, freeze it in a tap if it goes missing, and request a replacement whenever you need one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section on-paper-dim" id="products">
+  <div class="container">
+    <div class="section-head">
+      <h2>Products built around real life</h2>
+      <p>Whether you're saving for something specific or need a little breathing room, there's a Pride Bank product for it.</p>
+    </div>
+    <div class="product-row">
+      <div class="product-card">
+        <span class="tag">SAVINGS</span>
+        <h3>Pride Save</h3>
+        <p>A everyday savings account with no hidden charges and a welcome credit the moment you open it.</p>
+        <a href="signup.html" class="learn">Open an account →</a>
+      </div>
+      <div class="product-card">
+        <span class="tag">LOANS</span>
+        <h3>Pride Quick Loan</h3>
+        <p>Apply for a loan in the dashboard and get a decision back without visiting a branch — repayments tailored to your tenure.</p>
+        <a href="signup.html" class="learn">Check eligibility →</a>
+      </div>
+      <div class="product-card">
+        <span class="tag">CARDS</span>
+        <h3>Pride Verve Card</h3>
+        <p>A virtual debit card issued automatically with every account — freeze, view, or replace it any time.</p>
+        <a href="signup.html" class="learn">Get your card →</a>
+      </div>
+      <div class="product-card">
+        <span class="tag">TRANSFERS</span>
+        <h3>Pride Send</h3>
+        <p>Move money between Pride Bank accounts instantly, with a clear record of every transaction you make.</p>
+        <a href="signup.html" class="learn">Start sending →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-banner">
+  <div class="container stats-grid">
+    <div><strong>20+</strong><span>African countries</span></div>
+    <div><strong>₦4.1tn</strong><span>Assets under management</span></div>
+    <div><strong>98%</strong><span>Customer satisfaction</span></div>
+    <div><strong>15 yrs</strong><span>Serving communities</span></div>
+  </div>
+</section>
+
+<section class="section" id="security">
+  <div class="container">
+    <div class="section-head">
+      <h2>Security you don't have to think about</h2>
+      <p>Every transfer needs a PIN, every session is tied to your device, and your data stays on your own browser storage in this demo build.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>PIN-protected transfers</h3>
+        <p>Every outgoing transfer asks for a 4-digit PIN before it's confirmed, so a stray tap can't move your money.</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15v2M6 10V7a6 6 0 1112 0v3M5 10h14v10H5z" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Session-based login</h3>
+        <p>Logging out ends your session immediately, and the dashboard is only reachable once you're signed in.</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12l6 6L21 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Real-time validation</h3>
+        <p>Forms check your details as you type, so mistakes get caught before they become a support ticket.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Open your Pride Bank account in under two minutes.</h2>
+        <p style="margin-bottom:0; color:rgba(255,255,255,0.75);">No paperwork, no branch visit — just your details and a password.</p>
+      </div>
+      <a href="signup.html" class="btn btn-primary">Get started</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff; margin-bottom:14px;">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M20 2L36 9V19C36 28.5 29.5 35.5 20 38C10.5 35.5 4 28.5 4 19V9L20 2Z" fill="#C8102E"/>
+            <path d="M20 8L30 12.5V19.5C30 25.8 25.9 30.7 20 32.5C14.1 30.7 10 25.8 10 19.5V12.5L20 8Z" fill="#14110F"/>
+            <path d="M20 14L20 26M14 20L26 20" stroke="#F7F4EF" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-word">PRIDE <em>BANK</em></span>
+        </a>
+        <p style="max-width:32ch; font-size:0.88rem;">A demo digital bank front-end built for learning purposes — not a real financial institution.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1-.8-.8-1.9-1.3-3-1.3-2.3 0-4.1 1.9-4.1 4.1 0 .3 0 .6.1.9-3.4-.2-6.5-1.8-8.5-4.3-.4.6-.6 1.3-.6 2.1 0 1.4.7 2.7 1.8 3.4-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1.5 1.6 2 2.8 3.8 2.8-1.4 1.1-3.2 1.7-5.1 1.7-.3 0-.7 0-1-.1 1.8 1.2 4 1.9 6.3 1.9 7.5 0 11.6-6.2 11.6-11.6v-.5c.8-.6 1.5-1.3 2-2.1z" stroke-width="0"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h3l1-3h-4v-2c0-.5.5-1 1-1z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Bank</h4>
+        <ul>
+          <li><a href="#personal">Personal</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#security">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul>
+          <li><a href="signup.html">Open an account</a></li>
+          <li><a href="login.html">Log in</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help centre</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Report an issue</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Pride Bank. A student class project — not a real bank.</span>
+      <span>Made with HTML, CSS &amp; JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

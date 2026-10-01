@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fund Account — Pride Bank</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%23C8102E%22/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="sidebar-scrim" id="sidebarScrim"></div>
+<div class="app-shell">
+  <aside class="app-sidebar" id="appSidebar">
+    <a href="dashboard.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M20 2L36 9V19C36 28.5 29.5 35.5 20 38C10.5 35.5 4 28.5 4 19V9L20 2Z" fill="#C8102E"/>
+        <path d="M20 8L30 12.5V19.5C30 25.8 25.9 30.7 20 32.5C14.1 30.7 10 25.8 10 19.5V12.5L20 8Z" fill="#14110F"/>
+        <path d="M20 14L20 26M14 20L26 20" stroke="#F7F4EF" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-word">PRIDE <em>BANK</em></span>
+    </a>
+    <nav class="side-nav">
+      <a href="dashboard.html">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke-width="2"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke-width="2"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke-width="2"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke-width="2"/></svg>
+        Dashboard
+      </a>
+      <a href="fund.html" class="active">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="2"/><path d="M12 8v8M8 12h8" stroke-width="2" stroke-linecap="round"/></svg>
+        Fund Account
+      </a>
+      <a href="transfer.html">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Transfer
+      </a>
+      <a href="transactions.html">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke-width="2" stroke-linecap="round"/></svg>
+        Transactions
+      </a>
+      <a href="cards.html">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke-width="2"/><path d="M3 10h18" stroke-width="2"/></svg>
+        Cards
+      </a>
+      <a href="loans.html">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-width="2" stroke-linecap="round"/></svg>
+        Loans
+      </a>
+    </nav>
+    <div class="side-foot">
+      <button id="logoutBtn">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Log out
+      </button>
+    </div>
+  </aside>
+
+  <div>
+    <div class="mobile-topbar">
+      <button class="app-mobile-toggle" id="sidebarToggle" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <span class="brand">PRIDE <em>BANK</em></span>
+      <span style="width:24px;"></span>
+    </div>
+
+    <main class="app-main">
+      <div class="app-topbar">
+        <div>
+          <h1>Fund account</h1>
+          <div class="sub">Add money to your Pride Bank balance to top up before you spend or transfer.</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:24px;" id="fundGrid">
+        <div class="panel">
+          <div class="form-alert error" id="formAlert" role="alert"></div>
+          <div class="form-alert success" id="formSuccess" role="status"></div>
+
+          <div class="field">
+            <label for="amount">Amount to add (₦)</label>
+            <input type="number" id="amount" min="100" step="100" placeholder="0.00" required />
+            <div class="error-msg" id="amountError">Enter an amount of at least ₦100.</div>
+          </div>
+
+          <div class="field">
+            <label>Funding method</label>
+            <div class="method-grid" id="methodGrid">
+              <button type="button" class="method-option active" data-method="card">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke-width="2"/><path d="M3 10h18" stroke-width="2"/></svg>
+                <span>Debit card</span>
+              </button>
+              <button type="button" class="method-option" data-method="transfer">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Bank transfer</span>
+              </button>
+              <button type="button" class="method-option" data-method="ussd">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2" stroke-width="2"/><path d="M9 18h6" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>USSD</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Debit card panel -->
+          <div class="method-panel" id="panel-card">
+            <div class="field" id="cardNumberField">
+              <label for="cardNumber">Card number</label>
+              <input type="text" id="cardNumber" inputmode="numeric" placeholder="1234 5678 9012 3456" maxlength="19" />
+              <div class="error-msg">Enter a valid 16-digit card number.</div>
+            </div>
+            <div class="form-row-2">
+              <div class="field" id="cardExpiryField">
+                <label for="cardExpiry">Expiry (MM/YY)</label>
+                <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" />
+                <div class="error-msg">Enter a valid expiry date.</div>
+              </div>
+              <div class="field" id="cardCvvField">
+                <label for="cardCvv">CVV</label>
+                <input type="password" id="cardCvv" inputmode="numeric" placeholder="123" maxlength="3" />
+                <div class="error-msg">Enter a valid 3-digit CVV.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bank transfer panel -->
+          <div class="method-panel" id="panel-transfer" style="display:none;">
+            <div class="panel" style="background: var(--paper-dim); border-style: dashed;">
+              <p style="margin-bottom:4px; font-size:0.82rem; color:var(--gray-600);">Send money to this Pride Bank funding account, and confirm below once it's done.</p>
+              <p style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:4px;" id="virtualAcctNumber">—</p>
+              <p style="margin-bottom:0; font-size:0.82rem;">Bank: Pride Bank &nbsp;•&nbsp; Account name: <span id="virtualAcctName">—</span></p>
+            </div>
+          </div>
+
+          <!-- USSD panel -->
+          <div class="method-panel" id="panel-ussd" style="display:none;">
+            <div class="panel" style="background: var(--paper-dim); border-style: dashed;">
+              <p style="margin-bottom:4px; font-size:0.82rem; color:var(--gray-600);">Dial this USSD code on the phone linked to your account, then confirm below.</p>
+              <p style="font-family:var(--font-display); font-size:1.3rem; margin-bottom:0;" id="ussdCode">*919*000*0#</p>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary btn-block" id="fundBtn">Add money</button>
+          <p class="hint text-center" style="margin-top:14px;">This is a simulated deposit for demo purposes — no real payment is processed.</p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>Your balance</h2></div>
+          <p class="mt-0" style="font-size:0.85rem; color:var(--gray-600); margin-bottom:4px;">Available now</p>
+          <p style="font-weight:700; font-family:var(--font-display); font-size:1.5rem; color:var(--red); margin-bottom:20px;" id="currentBalance">—</p>
+          <p style="font-size:0.85rem; color:var(--gray-600); margin-bottom:4px;">Account number</p>
+          <p style="font-weight:600;" id="acctNumberSide">—</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12l6 6L21 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span id="toastMsg"></span>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/app-shell.js"></script>
+<script src="js/fund.js"></script>
+</body>
+</html>
