@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Open an Account — Pride Bank</title>
+<title>Sign-up Disabled — Pride Bank Demo</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%23C8102E%22/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,10 +22,9 @@
       <span class="brand-word">PRIDE <em>BANK</em></span>
     </a>
     <blockquote>
-      “Your account number, welcome credit and card are ready the second you finish signing up.”
-      <cite>— Pride Bank Onboarding Team</cite>
+      Pride Bank is a fictional banking interface created as a portfolio project.
     </blockquote>
-    <p style="font-size:0.82rem; color:rgba(255,255,255,0.55); margin:0;">A demo bank interface for a class project — not a real financial institution.</p>
+    <p style="font-size:0.82rem; color:rgba(255,255,255,0.75); margin:0;">No real financial services. This demo does not accept personal details or passwords.</p>
   </aside>
 
   <main class="auth-main">
@@ -38,64 +37,16 @@
         </svg>
         <span class="brand-word">PRIDE <em>BANK</em></span>
       </a>
-      <h1>Open your account</h1>
-      <p>It takes about two minutes — you'll get an account number and welcome credit right away.</p>
+      <h1>Sign-up is disabled</h1>
+      <p>This portfolio demo does not create accounts or collect personal information. You can explore the interface using its built-in sample account.</p>
 
       <div class="form-alert error" id="formAlert" role="alert"></div>
 
-      <form id="signupForm" novalidate>
-        <div class="field" id="fullNameField">
-          <label for="fullName">Full name</label>
-          <input type="text" id="fullName" name="fullName" placeholder="e.g. Adaeze Nwosu" autocomplete="name" required />
-          <div class="error-msg">Enter your full name (first and last).</div>
-        </div>
-
-        <div class="field" id="emailField">
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-          <div class="error-msg">Enter a valid email address.</div>
-        </div>
-
-        <div class="field" id="phoneField">
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" name="phone" placeholder="080XXXXXXXX" autocomplete="tel" required />
-          <div class="hint">11-digit Nigerian number, e.g. 08012345678</div>
-          <div class="error-msg">Enter a valid 11-digit phone number.</div>
-        </div>
-
-        <div class="field" id="passwordField">
-          <label for="password">Password</label>
-          <div class="input-wrap">
-            <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password" required />
-            <button type="button" class="toggle-visibility" id="togglePassword" aria-label="Show password">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke-width="2"/></svg>
-            </button>
-          </div>
-          <div class="strength-meter" id="strengthMeter"><span></span><span></span><span></span></div>
-          <div class="hint" id="strengthLabel">Use 8+ characters with a number and a symbol.</div>
-          <div class="error-msg">Password must be at least 8 characters with a number.</div>
-        </div>
-
-        <div class="field" id="confirmField">
-          <label for="confirmPassword">Confirm password</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password" required />
-          <div class="error-msg">Passwords do not match.</div>
-        </div>
-
-        <div class="field" id="termsField" style="margin-bottom:22px;">
-          <label class="checkbox-row"><input type="checkbox" id="terms" /> I agree to the Terms of Service and Privacy Policy</label>
-          <div class="error-msg">You must accept the terms to continue.</div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block" id="signupBtn">Create my account</button>
-      </form>
-
-      <p class="text-center" style="margin-top:22px;">Already have an account? <a href="login.html" style="color:var(--red); font-weight:600;">Log in</a></p>
+      <a href="login.html" class="btn btn-primary btn-block">Explore sample account</a>
+      <p class="text-center" style="margin-top:22px;">No personal information is requested or stored.</p>
     </div>
   </main>
 </div>
 
-<script src="js/storage.js"></script>
-<script src="js/auth.js"></script>
 </body>
 </html>

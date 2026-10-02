@@ -11,6 +11,7 @@ const DB_KEYS = {
   CARDS: "pridebank_cards",
   LOANS: "pridebank_loans",
   SEEDED: "pridebank_seeded",
+  VERSION: "pridebank_demo_version",
 };
 
 const PrideDB = (() => {
@@ -76,14 +77,13 @@ const PrideDB = (() => {
     return getUsers().find((u) => u.id === id);
   }
 
-  function createUser({ fullName, email, phone, password }) {
+  function createUser({ fullName, email, phone }) {
     const users = getUsers();
     const newUser = {
       id: uid("usr"),
       fullName,
       email,
       phone,
-      password, // demo project only — never store plain passwords in real apps
       accountNumber: generateAccountNumber(),
       balance: 25000, // welcome bonus so the dashboard isn't empty
       createdAt: new Date().toISOString(),
@@ -304,6 +304,16 @@ const PrideDB = (() => {
 
   // ---------- Demo seed data ----------
   function seedIfEmpty() {
+    if (read(DB_KEYS.VERSION, 0) < 2) {
+      try {
+        [DB_KEYS.USERS, DB_KEYS.SESSION, DB_KEYS.TXNS, DB_KEYS.CARDS, DB_KEYS.LOANS, DB_KEYS.SEEDED]
+          .forEach((key) => localStorage.removeItem(key));
+        localStorage.setItem(DB_KEYS.VERSION, "2");
+      } catch (e) {
+        console.error("PrideDB demo data reset error:", e);
+      }
+    }
+
     if (read(DB_KEYS.SEEDED, false)) return;
     const users = getUsers();
     if (users.length === 0) {
@@ -311,13 +321,11 @@ const PrideDB = (() => {
         fullName: "Demo Customer",
         email: "demo@pridebank.test",
         phone: "08012345678",
-        password: "Demo@1234",
       });
       createUser({
-        fullName: "Chinwe Okafor",
-        email: "chinwe@pridebank.test",
-        phone: "08023456789",
-        password: "Demo@1234",
+        fullName: "Sample Recipient",
+        email: "recipient@pridebank.test",
+        phone: "00000000000",
       });
     }
     write(DB_KEYS.SEEDED, true);

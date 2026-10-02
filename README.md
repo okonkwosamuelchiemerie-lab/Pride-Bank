@@ -7,7 +7,7 @@ A fully front-end digital banking web app built with **plain HTML, CSS and JavaS
 ## Features
 
 - **Landing page** — responsive marketing site with hero, features, products, stats and footer
-- **Sign up / Log in** — real-time form validation (email format, Nigerian phone number format, password strength meter, matching password confirmation)
+- **Demo entry** — one-click access to a seeded sample account; no sign-up or password entry
 - **Dashboard** — balance card (with show/hide toggle), account details, quick actions, recent transactions
 - **Transfers** — send money to any other Pride Bank account number, with live recipient lookup, balance checks and a PIN-confirmation modal
 - **Transactions** — full history with search and type filtering
@@ -28,12 +28,7 @@ A fully front-end digital banking web app built with **plain HTML, CSS and JavaS
 
 ## Demo login
 
-A demo account is seeded automatically the first time the app runs:
-
-- **Email:** `demo@pridebank.test`
-- **Password:** `Demo@1234`
-
-You can also create your own account from the Sign Up page — it will start with a ₦25,000 welcome credit.
+A sample account is seeded automatically. Select **Enter sample account** on the demo page; no credentials or personal information are requested.
 
 **Transaction PIN for transfers (demo only):** `1234`
 
@@ -54,7 +49,7 @@ pride-bank/
 ├── js/
 │   ├── storage.js           localStorage data layer ("database")
 │   ├── main.js               Landing page interactions
-│   ├── auth.js                Login/signup validation & session handling
+│   ├── demo-auth.js           Sample account session handling
 │   ├── app-shell.js            Shared logic for logged-in pages (auth guard, sidebar, logout, toast)
 │   ├── dashboard.js
 │   ├── transfer.js
@@ -74,6 +69,5 @@ pride-bank/
 
 ## Notes for grading / review
 
-- All "backend" behaviour (accounts, transfers, cards, loans) is simulated entirely in the browser via `localStorage` — refreshing the page keeps your data, but clearing site data/localStorage will reset it.
-- Passwords are stored in plain text in localStorage for simplicity — **this is only acceptable because it's a local demo project with no real backend or real user data**. A production system would never do this.
+- All behavior (accounts, transfers, cards, loans) is simulated entirely in the browser via `localStorage`. The app accepts no personal information and is not connected to a bank or payment network.
 - No external libraries or frameworks are used — just HTML, CSS and vanilla JavaScript (Google Fonts is the only external resource, loaded for typography).
