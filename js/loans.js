@@ -70,10 +70,10 @@ function setupLoanForm() {
 
     setTimeout(() => {
       PrideDB.applyForLoan({ userId: LOANS_USER.id, amount, tenure: `${tenure} months`, purpose });
-      showToast("Loan application submitted — we'll update the status shortly.", "success");
+      showToast("Sample scenario recorded in this browser only.", "success");
       form.reset();
       btn.disabled = false;
-      btn.textContent = "Submit application";
+      btn.textContent = "Run sample simulation";
       renderLoans();
       renderTiles();
     }, 500);

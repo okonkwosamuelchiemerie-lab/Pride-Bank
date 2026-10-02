@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Loans — Pride Bank</title>
+<title>Loan Simulation — Pride Bank Portfolio Project</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%23C8102E%22/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -68,19 +68,19 @@
     <main class="app-main">
       <div class="app-topbar">
         <div>
-          <h1>Loans</h1>
-          <div class="sub">Apply for a Pride Quick Loan and track its status.</div>
+          <h1>Loan simulation</h1>
+          <div class="sub">Fictional scenarios only. No application is sent to or reviewed by a lender.</div>
         </div>
       </div>
 
       <div class="tile-row">
-        <div class="tile"><div class="label">Available credit</div><strong id="availableCredit">₦0</strong></div>
-        <div class="tile"><div class="label">Active loans</div><strong id="activeLoansCount">0</strong></div>
-        <div class="tile"><div class="label">Total borrowed</div><strong id="totalBorrowed">₦0</strong></div>
+        <div class="tile"><div class="label">Sample credit limit</div><strong id="availableCredit">₦0</strong></div>
+        <div class="tile"><div class="label">Simulated applications</div><strong id="activeLoansCount">0</strong></div>
+        <div class="tile"><div class="label">Sample approved amount</div><strong id="totalBorrowed">₦0</strong></div>
       </div>
 
       <div class="panel">
-        <div class="panel-head"><h2>Apply for a loan</h2></div>
+        <div class="panel-head"><h2>Run a sample scenario</h2></div>
         <div class="form-alert error" id="formAlert" role="alert"></div>
         <form id="loanForm" novalidate>
           <div class="form-row-2">
@@ -102,16 +102,22 @@
             </div>
           </div>
           <div class="field" id="purposeField">
-            <label for="purpose">Purpose of loan</label>
-            <textarea id="purpose" placeholder="Tell us what the loan is for" required></textarea>
-            <div class="error-msg">Let us know what the loan is for.</div>
+            <label for="purpose">Sample scenario</label>
+            <select id="purpose" required>
+              <option value="">Select a fictional scenario</option>
+              <option value="Education sample">Education</option>
+              <option value="Home improvement sample">Home improvement</option>
+              <option value="Small business sample">Small business</option>
+              <option value="Emergency expense sample">Emergency expense</option>
+            </select>
+            <div class="error-msg">Choose a sample scenario.</div>
           </div>
-          <button type="submit" class="btn btn-primary" id="loanBtn">Submit application</button>
+          <button type="submit" class="btn btn-primary" id="loanBtn">Run sample simulation</button>
         </form>
       </div>
 
       <div class="panel">
-        <div class="panel-head"><h2>Your loan applications</h2></div>
+        <div class="panel-head"><h2>Simulated scenarios</h2></div>
         <table class="txn-table">
           <thead><tr><th>Amount</th><th>Tenure</th><th>Purpose</th><th>Applied</th><th>Status</th></tr></thead>
           <tbody id="loansBody"></tbody>

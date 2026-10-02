@@ -8,9 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSidebarToggle();
   setupLogout();
   paintGreeting();
+  addDemoNotice();
 
   document.dispatchEvent(new CustomEvent("prideAuthReady", { detail: CURRENT_USER }));
 });
+
+function addDemoNotice() {
+  const main = document.querySelector(".app-main");
+  if (!main) return;
+
+  const notice = document.createElement("p");
+  notice.className = "demo-notice";
+  notice.setAttribute("role", "note");
+  notice.textContent = "FICTIONAL PORTFOLIO DEMO. No real accounts, money, loans, or payment cards. Do not enter personal, banking, or payment information.";
+  main.prepend(notice);
+}
 
 function setupSidebarToggle() {
   const toggle = document.getElementById("sidebarToggle");

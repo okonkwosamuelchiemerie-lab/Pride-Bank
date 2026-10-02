@@ -1,6 +1,6 @@
-# Pride Bank — Front-End Banking Project
+# Pride Bank — Fictional Banking Interface Demo
 
-A fully front-end digital banking web app built with **plain HTML, CSS and JavaScript**. There is no backend — all data (users, balances, transactions, cards, loans) is stored in the browser's **localStorage**, which acts as the app's "database" for this class project.
+A fictional banking-interface portfolio demo built with **plain HTML, CSS and JavaScript**. It is not a financial institution and has no payment processor or bank connection. Sample dashboard data is stored in the browser's **localStorage**.
 
 > This is a student/class project. Pride Bank is a fictional bank created for demonstration purposes only — it is not a real financial institution.
 
@@ -9,10 +9,10 @@ A fully front-end digital banking web app built with **plain HTML, CSS and JavaS
 - **Landing page** — responsive marketing site with hero, features, products, stats and footer
 - **Demo entry** — one-click access to a seeded sample account; no sign-up or password entry
 - **Dashboard** — balance card (with show/hide toggle), account details, quick actions, recent transactions
-- **Transfers** — send money to any other Pride Bank account number, with live recipient lookup, balance checks and a PIN-confirmation modal
+- **Funding and transfers** — disabled demo pages; no payment details, recipient account numbers, or transaction PINs are requested
 - **Transactions** — full history with search and type filtering
-- **Cards** — a flippable virtual debit card (tap to see the CVV on the back), freeze/unfreeze toggle, request a replacement card
-- **Loans** — apply for a loan with amount/tenure/purpose validation, see application status update from "Pending" to "Approved"/"Under review"
+- **Cards** — fictional sample card interface with masked numbers; no payment card or CVV is issued
+- **Loans** — local-only sample scenarios; no loan application is submitted or reviewed
 - Fully responsive down to small mobile screens, with an off-canvas sidebar on the dashboard pages and a collapsible nav on the marketing site
 - Accessible focus states, `prefers-reduced-motion` support, semantic HTML
 
@@ -30,8 +30,6 @@ A fully front-end digital banking web app built with **plain HTML, CSS and JavaS
 
 A sample account is seeded automatically. Select **Enter sample account** on the demo page; no credentials or personal information are requested.
 
-**Transaction PIN for transfers (demo only):** `1234`
-
 ## Project structure
 
 ```
@@ -40,7 +38,8 @@ pride-bank/
 ├── login.html             Login page
 ├── signup.html            Sign-up page
 ├── dashboard.html          Logged-in dashboard
-├── transfer.html           Send money page
+├── fund.html               Disabled funding demo notice
+├── transfer.html           Disabled transfer demo notice
 ├── transactions.html       Full transaction history
 ├── cards.html              Virtual card management
 ├── loans.html               Loan application + status
@@ -52,7 +51,6 @@ pride-bank/
 │   ├── demo-auth.js           Sample account session handling
 │   ├── app-shell.js            Shared logic for logged-in pages (auth guard, sidebar, logout, toast)
 │   ├── dashboard.js
-│   ├── transfer.js
 │   ├── cards.js
 │   ├── loans.js
 │   └── transactions.js
@@ -69,5 +67,5 @@ pride-bank/
 
 ## Notes for grading / review
 
-- All behavior (accounts, transfers, cards, loans) is simulated entirely in the browser via `localStorage`. The app accepts no personal information and is not connected to a bank or payment network.
+- Dashboard, card, and loan screens use fictional sample data in this browser. Funding and transfer actions are disabled. The app accepts no personal, banking, or payment credentials and is not connected to a bank or payment network.
 - No external libraries or frameworks are used — just HTML, CSS and vanilla JavaScript (Google Fonts is the only external resource, loaded for typography).

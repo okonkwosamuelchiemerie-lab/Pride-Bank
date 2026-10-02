@@ -654,6 +654,14 @@ button { font-family: inherit; cursor: pointer; }
 .side-foot svg { width: 18px; height: 18px; stroke: currentColor; }
 
 .app-main { padding: 32px 40px 60px; max-width: 1040px; }
+.demo-notice {
+  margin: 0 0 22px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--red);
+  background: var(--paper-dim);
+  color: var(--ink);
+  font-size: 0.88rem;
+}
 .app-topbar {
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 30px; gap: 16px; flex-wrap: wrap;

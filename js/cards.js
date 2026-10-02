@@ -9,10 +9,6 @@ function maskCardNumber(num) {
   return num.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/, "$1 $2•• •••$4".replace("$4", num.slice(-4)));
 }
 
-function formatCardNumberFull(num) {
-  return num.replace(/(\d{4})(?=\d)/g, "$1 ");
-}
-
 function renderCards() {
   const cards = PrideDB.getCards(CARDS_USER.id);
   const wrap = document.getElementById("cardsWrap");
@@ -31,16 +27,16 @@ function renderCards() {
       return `
       <div class="panel" style="max-width:420px; margin:0 auto 24px;">
         <div class="virtual-card-wrap">
-          <div class="virtual-card" data-card-id="${card.id}" tabindex="0" role="button" aria-label="Flip card to see CVV">
+          <div class="virtual-card" data-card-id="${card.id}" tabindex="0" role="button" aria-label="Flip sample card">
             <div class="vc-face front">
-              <div class="vc-row"><span>Pride Verve</span><span>${isPending ? "Pending" : isFrozen ? "Frozen" : "Active"}</span></div>
+              <div class="vc-row"><span>Sample card</span><span>${isPending ? "Pending" : isFrozen ? "Frozen" : "Active"}</span></div>
               <div class="chip"></div>
-              <div class="vc-number">${isPending ? "•••• •••• •••• ••••" : formatCardNumberFull(card.cardNumber)}</div>
+              <div class="vc-number">•••• •••• •••• ${card.cardNumber.slice(-4)}</div>
               <div class="vc-row"><span>${escapeHtml(CARDS_USER.fullName)}</span><span>Exp ${card.expiry}</span></div>
             </div>
             <div class="vc-face back">
               <div class="magstripe"></div>
-              <div class="cvv-strip">CVV ${isPending ? "•••" : card.cvv}</div>
+              <div class="cvv-strip">DEMO ONLY · NO PAYMENT CARD</div>
             </div>
           </div>
         </div>
@@ -62,7 +58,7 @@ function renderCards() {
     })
     .join("") + `
     <div class="text-center">
-      <button class="btn btn-outline" id="requestCardBtn">Request a new card</button>
+      <button class="btn btn-outline" id="requestCardBtn">Add sample card</button>
     </div>`;
 
   wrap.querySelectorAll(".virtual-card").forEach((el) => {

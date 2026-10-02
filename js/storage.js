@@ -177,7 +177,6 @@ const PrideDB = (() => {
       expiry: `${String(new Date().getMonth() + 1).padStart(2, "0")}/${String(
         (new Date().getFullYear() + 4) % 100
       ).padStart(2, "0")}`,
-      cvv: String(Math.floor(100 + Math.random() * 899)),
       status: "active", // active | frozen | pending
     };
     all.push(card);
